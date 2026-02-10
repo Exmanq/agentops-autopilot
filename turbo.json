@@ -12,12 +12,12 @@
       "outputs": ["dist/**", "build/**", ".next/**"]
     },
     "test": {
-      "dependsOn": ["build"],
+      "dependsOn": ["^build", "build"],
       "outputs": ["coverage/**"],
       "cache": false
     },
     "demo": {
-      "dependsOn": ["build"],
+      "dependsOn": ["^build", "build"],
       "cache": false
     },
     "dev": {
