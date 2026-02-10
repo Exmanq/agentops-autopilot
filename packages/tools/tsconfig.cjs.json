@@ -1,14 +1,15 @@
 {
-  "extends": "./tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "outDir": "dist/cjs",
+    "target": "ES2022",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "target": "ES2022",
-    "declaration": true,
-    "declarationDir": "dist/cjs",
-    "noEmit": false,
-    "allowSyntheticDefaultImports": true
+    "rootDir": "src",
+    "outDir": "dist/cjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
   },
   "include": ["src/**/*"]
 }
