@@ -15,6 +15,6 @@ export async function runAutopilot(task: Task, registry: ToolRegistry): Promise<
   return result;
 }
 
-export * from './types.js';
+export type { AutopilotResult, Task, ToolRegistry } from './types.js';
 export * from './planner.js';
 export * from './executor.js';
