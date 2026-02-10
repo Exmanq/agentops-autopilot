@@ -15,6 +15,18 @@
     "outDir": "dist",
     "types": ["node"],
     "baseUrl": "./",
-    "preserveSymlinks": true
+    "preserveSymlinks": true,
+    "paths": {
+      "@agentops-autopilot/core": ["packages/core/src/index.ts"],
+      "@agentops-autopilot/core/*": ["packages/core/src/*"],
+      "@agentops-autopilot/tools": ["packages/tools/src/index.ts"],
+      "@agentops-autopilot/tools/*": ["packages/tools/src/*"],
+      "@agentops-autopilot/api": ["packages/api/src/server.ts"],
+      "@agentops-autopilot/api/*": ["packages/api/src/*"],
+      "@agentops-autopilot/cli": ["packages/cli/src/index.ts"],
+      "@agentops-autopilot/cli/*": ["packages/cli/src/*"],
+      "@agentops-autopilot/evals": ["packages/evals/src/index.ts"],
+      "@agentops-autopilot/evals/*": ["packages/evals/src/*"]
+    }
   }
 }
