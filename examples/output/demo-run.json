@@ -1,0 +1,110 @@
+{
+  "task": {
+    "id": "demo-cli",
+    "goal": "Demo pipeline",
+    "repo": "demo/repo"
+  },
+  "plan": {
+    "taskId": "demo-cli",
+    "steps": [
+      {
+        "title": "Assess codebase and tests (Demo pipeline)",
+        "command": "echo \"Running lint and smoke tests\"",
+        "description": "Scan the repository, read docs, and run quick checks.",
+        "id": "891efbf6-429c-4eb2-98ef-249bed67d923"
+      },
+      {
+        "title": "Implement changes (Demo pipeline)",
+        "command": "echo \"Applying changes with tools\"",
+        "description": "Edit code guided by the goal and run targeted commands.",
+        "id": "f2961150-f23f-43b4-9673-57aa2aae067b"
+      },
+      {
+        "title": "Validate and draft PR (Demo pipeline)",
+        "command": "echo \"Validating build and drafting PR\"",
+        "description": "Execute full validation, summarize, and prepare PR.",
+        "id": "764a335b-1baa-4a46-be65-ebe3a47a6ad3"
+      }
+    ]
+  },
+  "results": [
+    {
+      "step": {
+        "title": "Assess codebase and tests (Demo pipeline)",
+        "command": "echo \"Running lint and smoke tests\"",
+        "description": "Scan the repository, read docs, and run quick checks.",
+        "id": "891efbf6-429c-4eb2-98ef-249bed67d923"
+      },
+      "success": true,
+      "output": "Running lint and smoke tests",
+      "logs": [
+        {
+          "stepId": "891efbf6-429c-4eb2-98ef-249bed67d923",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.983Z",
+          "message": "Executing: echo \"Running lint and smoke tests\""
+        },
+        {
+          "stepId": "891efbf6-429c-4eb2-98ef-249bed67d923",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.989Z",
+          "message": "Output: Running lint and smoke tests"
+        }
+      ]
+    },
+    {
+      "step": {
+        "title": "Implement changes (Demo pipeline)",
+        "command": "echo \"Applying changes with tools\"",
+        "description": "Edit code guided by the goal and run targeted commands.",
+        "id": "f2961150-f23f-43b4-9673-57aa2aae067b"
+      },
+      "success": true,
+      "output": "Applying changes with tools",
+      "logs": [
+        {
+          "stepId": "f2961150-f23f-43b4-9673-57aa2aae067b",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.989Z",
+          "message": "Executing: echo \"Applying changes with tools\""
+        },
+        {
+          "stepId": "f2961150-f23f-43b4-9673-57aa2aae067b",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.991Z",
+          "message": "Output: Applying changes with tools"
+        }
+      ]
+    },
+    {
+      "step": {
+        "title": "Validate and draft PR (Demo pipeline)",
+        "command": "echo \"Validating build and drafting PR\"",
+        "description": "Execute full validation, summarize, and prepare PR.",
+        "id": "764a335b-1baa-4a46-be65-ebe3a47a6ad3"
+      },
+      "success": true,
+      "output": "Validating build and drafting PR",
+      "logs": [
+        {
+          "stepId": "764a335b-1baa-4a46-be65-ebe3a47a6ad3",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.991Z",
+          "message": "Executing: echo \"Validating build and drafting PR\""
+        },
+        {
+          "stepId": "764a335b-1baa-4a46-be65-ebe3a47a6ad3",
+          "level": "info",
+          "timestamp": "2026-02-10T17:49:41.994Z",
+          "message": "Output: Validating build and drafting PR"
+        }
+      ]
+    }
+  ],
+  "summary": "Task demo-cli (Demo pipeline) completed 3/3 steps.",
+  "artifacts": [
+    "artifact-891efbf6-429c-4eb2-98ef-249bed67d923.log",
+    "artifact-f2961150-f23f-43b4-9673-57aa2aae067b.log",
+    "artifact-764a335b-1baa-4a46-be65-ebe3a47a6ad3.log"
+  ]
+}

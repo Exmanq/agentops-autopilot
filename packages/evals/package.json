@@ -1,0 +1,22 @@
+{
+  "name": "@agentops-autopilot/evals",
+  "version": "0.1.0",
+  "description": "Evals harness for agentops-autopilot",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "node dist/demo.js"
+  },
+  "dependencies": {
+    "@agentops-autopilot/core": "workspace:*",
+    "@agentops-autopilot/tools": "workspace:*",
+    "pino": "^9.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}

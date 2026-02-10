@@ -1,0 +1,27 @@
+{
+  "name": "@agentops-autopilot/cli",
+  "version": "0.1.0",
+  "description": "CLI for agentops-autopilot",
+  "type": "module",
+  "bin": {
+    "agentops": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "node dist/index.js demo"
+  },
+  "dependencies": {
+    "@agentops-autopilot/core": "workspace:*",
+    "@agentops-autopilot/tools": "workspace:*",
+    "commander": "^11.1.0",
+    "pino": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}

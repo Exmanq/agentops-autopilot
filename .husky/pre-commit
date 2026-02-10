@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+pnpm lint --filter @agentops-autopilot/core --filter @agentops-autopilot/api --filter @agentops-autopilot/web --filter @agentops-autopilot/cli --filter @agentops-autopilot/tools --filter @agentops-autopilot/evals
+pnpm test --filter @agentops-autopilot/core --filter @agentops-autopilot/api --filter @agentops-autopilot/tools --filter @agentops-autopilot/cli

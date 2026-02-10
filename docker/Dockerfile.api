@@ -1,0 +1,13 @@
+FROM node:20-alpine AS base
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json tsconfig.base.json .eslintrc.cjs .prettierrc ./
+COPY packages ./packages
+RUN corepack enable && pnpm install --frozen-lockfile
+RUN pnpm --filter @agentops-autopilot/api build
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=base /app/packages/api/dist ./dist
+ENV NODE_ENV=production
+EXPOSE 3001
+CMD ["node", "dist/server.js"]

@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - name: Docker build api
+        run: docker build -f docker/Dockerfile.api -t agentops-autopilot-api .
+      - name: Docker build web
+        run: docker build -f docker/Dockerfile.web -t agentops-autopilot-web .
+      - name: SBOM
+        run: pnpm sbom
+      - name: Upload coverage
+        if: false
+        run: echo "placeholder"
