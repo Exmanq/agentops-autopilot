@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "description": "Planner and executor core for agentops-autopilot",
   "main": "dist/cjs/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/core/src/index.js",
+  "types": "dist/core/src/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "types": "./dist/core/src/index.d.ts",
+      "import": "./dist/core/src/index.js",
       "require": "./dist/cjs/index.js",
-      "default": "./dist/index.js"
+      "default": "./dist/core/src/index.js"
     }
   },
   "scripts": {
@@ -19,7 +19,7 @@
     "lint": "eslint 'src/**/*.ts'",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "demo": "node dist/demo.js"
+    "demo": "node dist/core/src/demo.js"
   },
   "dependencies": {
     "@agentops-autopilot/tools": "workspace:*",
